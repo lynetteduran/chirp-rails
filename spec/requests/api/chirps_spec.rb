@@ -4,7 +4,7 @@ describe "Chirp API Tests" do
   it "GET /chirps should return 200" do
     get "/chirps"
 
-    expect(response).to have http_status(200)
+    expect(response).to have_http_status(200)
 
   end
 end
