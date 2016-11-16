@@ -12,7 +12,7 @@ class UsersController < ApplicationController
       render :json => user, status: 201
     else
       render :json => {error: "Error creating user"},
-      status: 400
+                      status: 400
     end
   end
 

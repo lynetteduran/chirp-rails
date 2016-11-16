@@ -48,8 +48,7 @@ describe "User API Tests" do
   #5 tests users#update
   it "PUT /users/:id should return 204 (No Content)" do
 
-    user = User
-          .create(username: "Test", email: "test@test.com", password: "test")
+    user = User.create(username: "Test", email: "test@test.com", password: "test")
 
     put "/users/#{user.id}", params: {
       user: {
@@ -62,8 +61,7 @@ describe "User API Tests" do
 
   #6 tests users#destroy
   it "DELETE /users/:id should return 200" do
-    user = User
-          .create(username: "Test", email: "test@test.com", password: "test")
+    user = User.create(username: "Test", email: "test@test.com", password: "test")
 
     delete "/users/#{user.id}"
 
